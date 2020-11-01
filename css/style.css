@@ -1,40 +1,72 @@
 :root {
-    --main-bg-color: #0A2846;
-  }
+  --main-bg-color: #0a2846;
+}
 
 body {
-    background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
+}
+
+.rabbit-on-moon {
+  display: inline;
+}
+
+.rabbit,
+.moon {
+  display: grid;
+  margin: auto;
 }
 
 .rabbit {
-    display: grid;
-    width: 220px;
-    height: 300px;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(15, 1fr);
+  width: 220px;
+  height: 300px;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+.moon {
+  width: 560px;
+  height: 560px;
+  grid-template-columns: repeat(28, 1fr);
+  grid-template-rows: repeat(28, 1fr);
 }
 
 .one {
-grid-column-start: span 1;
-border: 8px solid var(--main-bg-color);
+  grid-column-start: span 1;
+  border: 8px solid var(--main-bg-color);
 }
 
 .two {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-    border: 18px solid var(--main-bg-color);
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+  border: 18px solid var(--main-bg-color);
 }
 
 .three {
-    grid-column-start: span 3;
-    grid-row-start: span 3;
-    border: 28px solid var(--main-bg-color);
+  grid-column-start: span 3;
+  grid-row-start: span 3;
+  border: 28px solid var(--main-bg-color);
 }
 
-.one, .two, .three {
-    transition: all 0.25s ease-in-out;
+.four {
+  grid-column-start: span 4;
+  grid-row-start: span 4;
+  border: 38px solid var(--main-bg-color);
+}
+
+.six {
+  grid-column-start: span 6;
+  grid-row-start: span 6;
+  border: 58px solid var(--main-bg-color);
+}
+
+.one,
+.two,
+.three,
+.four,
+.six {
+  transition: all 0.25s ease-in-out;
 }
 
 .border-none {
-    border: 0px solid var(--main-bg-color);
+  border: 0px solid var(--main-bg-color);
 }

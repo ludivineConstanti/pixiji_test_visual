@@ -1,14 +1,21 @@
 let rabbit = document.querySelector(".rabbit");
-let arrayRabbit = Array.from(rabbit.querySelectorAll("div"));
-arrayRabbit = arrayRabbit.filter(e => e.style.backgroundColor);
+let moon = document.querySelector(".moon");
+let arrRabbit = Array.from(rabbit.querySelectorAll("div"));
+let arrMoon = Array.from(moon.querySelectorAll("div"));
+arrRabbit = arrRabbit.filter(e => e.style.backgroundColor);
+arrMoon = arrMoon.filter(e => e.style.backgroundColor);
 
 function removeBorders(){
-    let randomNumber = Math.floor(Math.random()* arrayRabbit.length);
-    if(arrayRabbit.length){
-       arrayRabbit[randomNumber].classList.add("border-none");
-      // arrayRabbit[randomNumber].style.removeProperty('border');
-       //arrayRabbit[randomNumber].style.border = '0px';
-        arrayRabbit.splice(randomNumber, 1);
+    let randomNumber = Math.floor(Math.random()* arrMoon.length);
+    if(arrMoon.length){
+        arrMoon[randomNumber].classList.add("border-none");
+       arrMoon.splice(randomNumber, 1);
+    }
+    
+    else if(arrRabbit.length){
+        randomNumber = Math.floor(Math.random()* arrRabbit.length);
+        arrRabbit[randomNumber].classList.add("border-none");
+       arrRabbit.splice(randomNumber, 1);
     }  
 }
 
